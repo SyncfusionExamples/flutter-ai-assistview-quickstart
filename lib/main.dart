@@ -30,7 +30,7 @@ class AssistViewSampleState extends State<AssistViewSample> {
   );
 
   void _generativeResponse(String data) async {
-    final String response = await _getAIResponse(data);
+    final String response = await _fetchAIResponse(data);
     setState(() {
       _messages.add(AssistMessage.response(
         data: response,
@@ -40,8 +40,9 @@ class AssistViewSampleState extends State<AssistViewSample> {
     });
   }
 
-  Future<String> _getAIResponse(String data) async {
+  Future<String> _fetchAIResponse(String data) async {
     await Future.delayed(const Duration(seconds: 2));
+    // Integrate an API call to communicate with the AI for real-time responses.
     String response =
         'Please connect to your preferred AI server for real-time queries.';
     return response;
