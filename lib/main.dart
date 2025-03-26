@@ -85,13 +85,13 @@ class AssistViewSampleState extends State<AssistViewSample> {
             },
           ),
           placeholderBuilder: _buildPlaceholder,
-          requestBubbleSettings: const AssistBubbleSettings(
-            showUserName: true,
+          requestMessageSettings: const AssistMessageSettings(
+            showAuthorName: true,
             showTimestamp: true,
-            showUserAvatar: true,
+            showAuthorAvatar: true,
           ),
-          responseBubbleSettings: const AssistBubbleSettings(
-            showUserAvatar: true,
+          responseMessageSettings: const AssistMessageSettings(
+            showAuthorAvatar: true,
           ),
         ),
       ),
